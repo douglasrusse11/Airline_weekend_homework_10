@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
+import static java.lang.Math.abs;
+
 public class Flight {
 
     private ArrayList<Pilot> pilots;
@@ -71,7 +73,10 @@ public class Flight {
 
     public void bookPassenger(Passenger passenger) {
         Random random = new Random();
-        int i = random.nextInt() % plane.getCapacity();
+        int i = abs(random.nextInt()) % plane.getCapacity();
+        while (passengers[i] != null) {
+            i = abs(random.nextInt()) % plane.getCapacity();
+        }
         passenger.setSeatNumber(i);
         passengers[i] = passenger;
     }
