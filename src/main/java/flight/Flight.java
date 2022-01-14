@@ -7,6 +7,7 @@ import plane.Plane;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
 
 public class Flight {
 
@@ -69,11 +70,10 @@ public class Flight {
     }
 
     public void bookPassenger(Passenger passenger) {
-        int i = 0;
-        while(passengers[i] != null) {
-            i++;
-        }
-        passengers[i+1] = passenger;
+        Random random = new Random();
+        int i = random.nextInt() % plane.getCapacity();
+        passenger.setSeatNumber(i);
+        passengers[i] = passenger;
     }
 
     public Passenger[] getPassengers() {
