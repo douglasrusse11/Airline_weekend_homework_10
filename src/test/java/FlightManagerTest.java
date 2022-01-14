@@ -1,4 +1,5 @@
 import flight.Flight;
+import flight.FlightManager;
 import org.junit.Before;
 import org.junit.Test;
 import person.Passenger;
