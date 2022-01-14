@@ -12,4 +12,8 @@ public class Pilot extends AirlineStaff {
     public String getLicenseNumber() {
         return this.licenseNumber;
     }
+
+    public String flyPlane() {
+        return "Flying plane";
+    }
 }
