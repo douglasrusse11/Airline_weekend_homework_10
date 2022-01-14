@@ -74,4 +74,12 @@ public class FlightTest {
     public void canGetPassengers() {
         assertEquals(Passenger[].class, flight.getPassengers().getClass());
     }
+
+    @Test
+    public void canAddSeatNumberWhenBookingPassenger() {
+        Passenger passenger = new Passenger("Paul", 3);
+        flight.bookPassenger(passenger);
+        assertTrue(passenger.getSeatNumber() >= 0);
+        assertTrue(passenger.getSeatNumber() < 467);
+    }
 }
