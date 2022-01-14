@@ -32,7 +32,8 @@ public class PassengerTest {
         assertEquals(2, passenger.getNumberOfBags());
     }
 
-    @Test canAddFlight() {
+    @Test
+    public void canAddFlight() {
         ArrayList<Pilot> pilots = new ArrayList<>();
         pilots.add(new Pilot("Bob", Rank.FIRST_OFFICER, "ABCD123"));
         pilots.add(new Pilot("Ted", Rank.CAPTAIN, "ABCD123"));
