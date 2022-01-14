@@ -10,6 +10,7 @@ import plane.Plane;
 import plane.PlaneType;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -26,7 +27,7 @@ public class FlightManagerTest {
         cabinCrewMembers[0] = new CabinCrewMember("Steve", Rank.FLIGHT_ATTENDANT);
         cabinCrewMembers[1] = new CabinCrewMember("John", Rank.PURSER);
         Plane plane = new Plane(PlaneType.BOEING747, 467, 124000);
-        Flight flight = new Flight(pilots, cabinCrewMembers, plane, "FR756", "EDI", "GLA", "13:00");
+        Flight flight = new Flight(pilots, cabinCrewMembers, plane, "FR756", "EDI", "GLA", new Date(2022, 1, 14, 13, 0));
         flightManager = new FlightManager(flight);
     }
 
