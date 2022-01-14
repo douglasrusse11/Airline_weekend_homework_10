@@ -70,6 +70,6 @@ public class FlightTest {
 
     @Test
     public void canGetPassengers() {
-        assertEquals(Passenger[].class, flight.getPassengers());
+        assertEquals(Passenger[].class, flight.getPassengers().getClass());
     }
 }

@@ -73,4 +73,8 @@ public class Flight {
         }
         passengers[i+1] = passenger;
     }
+
+    public Passenger[] getPassengers() {
+        return this.passengers;
+    }
 }
