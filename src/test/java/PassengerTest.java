@@ -8,8 +8,6 @@ public class PassengerTest {
 
     private Passenger passenger;
 
-    private Passenger passenger;
-
     @Before
     public void before() {
         passenger = new Passenger("Simon", 2);
