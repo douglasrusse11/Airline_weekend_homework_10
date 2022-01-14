@@ -21,7 +21,7 @@ public class PilotTest {
 
     @Test
     public void hasRank() {
-        assertEquals(Rank.FIRST_OFFICER, pilot.getRank);
+        assertEquals(Rank.FIRST_OFFICER, pilot.getRank());
     }
 
     @Test
