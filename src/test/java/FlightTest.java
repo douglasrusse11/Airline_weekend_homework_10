@@ -1,3 +1,4 @@
+import flight.Flight;
 import org.junit.Before;
 import org.junit.Test;
 import person.Passenger;
@@ -17,14 +18,13 @@ public class FlightTest {
     @Before
     public void before() {
         ArrayList<Pilot> pilots = new ArrayList<>();
-        ArrayList.add(new Pilot("Bob", Rank.FIRST_OFFICER, "ABCD123"));
-        ArrayList.add(new Pilot("Ted", Rank.CAPTAIN, "ABCD123"));
+        pilots.add(new Pilot("Bob", Rank.FIRST_OFFICER, "ABCD123"));
+        pilots.add(new Pilot("Ted", Rank.CAPTAIN, "ABCD123"));
         CabinCrewMember[] cabinCrewMembers = new CabinCrewMember[2];
         cabinCrewMembers[0] = new CabinCrewMember("Steve", Rank.FLIGHT_ATTENDANT);
         cabinCrewMembers[1] = new CabinCrewMember("John", Rank.PURSER);
-        Passenger[] passengers = new Passenger[467];
         Plane plane = new Plane(PlaneType.BOEING747, 467, 124000);
-        flight = new Flight(pilots, cabinCrewMembers, passengers, plane, "FR756", "EDI", "GLA", "13:00");
+        flight = new Flight(pilots, cabinCrewMembers, plane, "FR756", "EDI", "GLA", "13:00");
     }
 
     @Test
@@ -44,7 +44,7 @@ public class FlightTest {
 
     @Test
     public void hasPlane() {
-        assertEquals(Plane.class, flight.getPlane.getClass());
+        assertEquals(Plane.class, flight.getPlane().getClass());
     }
 
     @Test
