@@ -2,7 +2,7 @@ package person.airlineStaff;
 
 import person.Person;
 
-public class AirlineStaff extends Person {
+public abstract class AirlineStaff extends Person {
 
     private Rank rank;
 

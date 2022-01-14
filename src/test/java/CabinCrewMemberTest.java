@@ -3,6 +3,8 @@ import person.airlineStaff.CabinCrewMember;
 import org.junit.Before;
 import person.airlineStaff.Rank;
 
+import static org.junit.Assert.assertEquals;
+
 public class CabinCrewMemberTest {
 
     private CabinCrewMember cabinCrewMember;
@@ -19,6 +21,6 @@ public class CabinCrewMemberTest {
 
     @Test
     public void hasRank() {
-        assertEquals("CAPTAIN", cabinCrewMember.getRank());
+        assertEquals(Rank.CAPTAIN, cabinCrewMember.getRank());
     }
 }
